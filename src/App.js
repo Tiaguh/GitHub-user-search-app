@@ -40,28 +40,39 @@ export default function App() {
 
         <section>
 
-          <div>
-            <h1>Repos</h1>
-            <p>Repos Number</p>
-          </div>
+          <div className="repo-container">
 
-          <div>
-            <h1>Followers</h1>
-            <p>Followers Number</p>
-          </div>
+            <div>
+              <h1>Repos</h1>
+              <p>Repos Number</p>
+            </div>
 
-          <div>
-            <h1>Following</h1>
-            <p>Following Number</p>
+            <div>
+              <h1>Followers</h1>
+              <p>Followers Number</p>
+            </div>
+
+            <div>
+              <h1>Following</h1>
+              <p>Following Number</p>
+            </div>
+
           </div>
 
         </section>
 
-        <div>
-          <h3>Location</h3>
-          <h3>Twitter</h3>
-          <h3>Site</h3>
-          <h3>Company</h3>
+        <div className="user-social">
+          
+          <div>
+            <h3>Location</h3>
+            <h3>Twitter</h3>
+          </div>
+
+          <div>
+            <h3>Site</h3>
+            <h3>Company</h3>
+          </div>
+
         </div>
 
 

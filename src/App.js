@@ -44,17 +44,17 @@ export default function App() {
 
             <div>
               <h1>Repos</h1>
-              <p>Repos Number</p>
+              <p>0</p>
             </div>
 
             <div>
               <h1>Followers</h1>
-              <p>Followers Number</p>
+              <p>0</p>
             </div>
 
             <div>
               <h1>Following</h1>
-              <p>Following Number</p>
+              <p>0</p>
             </div>
 
           </div>

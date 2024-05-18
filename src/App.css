@@ -138,6 +138,27 @@ header h1 {
   justify-content: space-between;
 }
 
+.user-info-container main h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 26px;
+
+  color: #FFF;
+}
+
+.user-info-container main h2 {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+
+  color: #0079ff;
+}
+
+.user-info-container main h3 {
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+
+  color: #FFF;
+}
+
 .user-info-container section {
   width: 650px;
 
@@ -160,6 +181,20 @@ header h1 {
   background-color: #141d2f;
 }
 
+.user-info-container .repo-container h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+
+  color: #FFF;
+}
+
+.user-info-container .repo-container p {
+  font-family: "Space Mono", monospace;
+  font-size: 22px;
+
+  color: #FFF;
+}
+
 .user-social {
   width: 100%;
   height: 240px;
@@ -167,4 +202,11 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.user-social h3 {
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+
+  color: #FFF;
 }

@@ -204,9 +204,18 @@ header h1 {
   justify-content: space-around;
 }
 
+.icon-container {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 5px;
+}
+
 .user-social h3 {
   font-family: "Space Mono", monospace;
-  font-size: 15px;
+  font-size: 15 px;
 
   color: #FFF;
 }

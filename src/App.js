@@ -1,5 +1,10 @@
 import './App.css';
+
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import { MdLocationPin } from "react-icons/md";
+import { FaTwitter } from "react-icons/fa";
+import { IoIosLink } from "react-icons/io";
+import { FaCity } from "react-icons/fa";
 
 export default function App() {
   return (
@@ -62,15 +67,29 @@ export default function App() {
         </section>
 
         <div className="user-social">
-          
+
           <div>
-            <h3>Location</h3>
-            <h3>Twitter</h3>
+            <div className="icon-container" >
+              <MdLocationPin size={28} color="#4b6a9b" />
+              <h3>Location</h3>
+            </div>
+
+            <div className="icon-container" >
+              <FaTwitter size={25} color="#4b6a9b" />
+              <h3>Twitter</h3>
+            </div>
           </div>
 
           <div>
-            <h3>Site</h3>
-            <h3>Company</h3>
+            <div className="icon-container" >
+              <IoIosLink size={28} color="#4b6a9b" />
+              <h3>Site</h3>
+            </div>
+
+            <div className="icon-container" >
+              <FaCity size={26} color="#4b6a9b" />
+              <h3>Company</h3>
+            </div>
           </div>
 
         </div>

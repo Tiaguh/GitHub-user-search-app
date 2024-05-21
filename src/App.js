@@ -11,7 +11,6 @@ import { FaCity } from "react-icons/fa";
 export default function App() {
   const [background, setBackground] = useState(false)
 
-
   return (
     <div
       className="container"
@@ -19,7 +18,11 @@ export default function App() {
     >
 
       <header>
-        <h1>DevFinder</h1>
+        <h1
+          style={{ color: background ? "#000" : "#FFF" }}
+        >
+          DevFinder
+        </h1>
 
         <button onClick={() => setBackground(!background)} >
           Light
@@ -43,14 +46,26 @@ export default function App() {
 
         <main>
 
-          <img alt="user-img" />
+          <img />
 
           <div className="user-info">
 
             <div>
-              <h1>UserName</h1>
-              <h2>NickName</h2>
-              <h3>Bio</h3>
+              <h1
+                style={{ color: background ? "#000" : "#FFF" }}
+              >
+                UserName
+              </h1>
+
+              <h2>
+                NickName
+              </h2>
+
+              <h3
+                style={{ color: background ? "#D9D9D9" : "#FFF" }}
+              >
+                Bio
+              </h3>
             </div>
 
             <div>
@@ -65,22 +80,34 @@ export default function App() {
 
           <div
             className="repo-container"
-            style={{ background: background ? "#FFF" : "#1e2a47" }}
+            style={{ background: background ? "#F1F1F1" : "#141d2f" }}
           >
 
             <div>
-              <h1>Repos</h1>
-              <p>0</p>
+              <h1 style={{ color: background ? "#2b3442" : "#FFF" }} >
+                Repos
+              </h1>
+              <p style={{ color: background ? "#2b3442" : "#FFF" }} >
+                0
+              </p>
             </div>
 
             <div>
-              <h1>Followers</h1>
-              <p>0</p>
+              <h1 style={{ color: background ? "#2b3442" : "#FFF" }} >
+                Followers
+              </h1>
+              <p style={{ color: background ? "#2b3442" : "#FFF" }} >
+                0
+              </p>
             </div>
 
             <div>
-              <h1>Following</h1>
-              <p>0</p>
+              <h1 style={{ color: background ? "#2b3442" : "#FFF" }} >
+                Following
+              </h1>
+              <p style={{ color: background ? "#2b3442" : "#FFF" }} >
+                0
+              </p>
             </div>
 
           </div>
@@ -92,24 +119,39 @@ export default function App() {
           <div>
             <div className="icon-container" >
               <MdLocationPin size={28} color="#4b6a9b" />
-              <h3>Location</h3>
+              <h3
+                style={{ color: background ? "#000" : "#FFF" }}
+              >
+                Location</h3>
             </div>
 
             <div className="icon-container" >
               <FaTwitter size={25} color="#4b6a9b" />
-              <h3>Twitter</h3>
+              <h3
+                style={{ color: background ? "#000" : "#FFF" }}
+              >
+                Twitter
+              </h3>
             </div>
           </div>
 
           <div>
             <div className="icon-container" >
               <IoIosLink size={28} color="#4b6a9b" />
-              <h3>Site</h3>
+              <h3
+                style={{ color: background ? "#000" : "#FFF" }}
+              >
+                Site
+              </h3>
             </div>
 
             <div className="icon-container" >
               <FaCity size={26} color="#4b6a9b" />
-              <h3>Company</h3>
+              <h3
+                style={{ color: background ? "#000" : "#FFF" }}
+              >
+                Company
+              </h3>
             </div>
           </div>
 

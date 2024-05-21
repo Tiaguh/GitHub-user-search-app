@@ -21,8 +21,6 @@ a:focus {
 
   justify-content: center;
   align-items: center;
-
-  background-color: #141d2f;
 }
 
 header {
@@ -56,8 +54,6 @@ header h1 {
   padding-inline: 15px;
 
   border-radius: 15px;
-
-  background-color: #1e2a47;
 }
 
 .input-container input {
@@ -177,8 +173,6 @@ header h1 {
   border-radius: 10px;
 
   margin-top: 30px;
-
-  background-color: #141d2f;
 }
 
 .user-info-container .repo-container h1 {

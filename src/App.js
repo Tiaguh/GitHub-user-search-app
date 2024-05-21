@@ -1,5 +1,7 @@
 import './App.css';
 
+import { useState } from 'react';
+
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { MdLocationPin } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa";
@@ -7,21 +9,37 @@ import { IoIosLink } from "react-icons/io";
 import { FaCity } from "react-icons/fa";
 
 export default function App() {
+  const [background, setBackground] = useState(false)
+
+
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{ background: background ? "#F1F1F1" : "#141d2f" }}
+    >
 
       <header>
         <h1>DevFinder</h1>
-        <button>Light</button>
+
+        <button onClick={() => setBackground(!background)} >
+          Light
+        </button>
+
       </header>
 
-      <div className="input-container" >
+      <div
+        className="input-container"
+        style={{ background: background ? "#FFF" : "#1e2a47" }}
+      >
         <HiOutlineMagnifyingGlass color="#0079ff" size={45} />
         <input placeholder="Search Github Username..." />
         <button>Search</button>
       </div>
 
-      <div className="user-info-container" >
+      <div
+        className="user-info-container"
+        style={{ background: background ? "#FFF" : "#1e2a47" }}
+      >
 
         <main>
 
@@ -45,7 +63,10 @@ export default function App() {
 
         <section>
 
-          <div className="repo-container">
+          <div
+            className="repo-container"
+            style={{ background: background ? "#FFF" : "#1e2a47" }}
+          >
 
             <div>
               <h1>Repos</h1>

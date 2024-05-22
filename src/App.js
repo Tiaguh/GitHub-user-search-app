@@ -3,10 +3,10 @@ import './App.css';
 import { useState } from 'react';
 
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
-import { MdLocationPin } from "react-icons/md";
-import { FaTwitter } from "react-icons/fa";
+import { MdLocationPin, MdSunny } from "react-icons/md";
+import { FaTwitter, FaCity } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
-import { FaCity } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa6";
 
 export default function App() {
   const [background, setBackground] = useState(false)
@@ -25,7 +25,19 @@ export default function App() {
         </h1>
 
         <button onClick={() => setBackground(!background)} >
-          Light
+          {
+            background ? (
+              <div className='button-icon'>
+                <h2 style={{ color: "#697c9a" }}>Dark</h2>
+                <FaMoon color="#697c9a" size={20} />
+              </div>
+            ) : (
+              <div className='button-icon'>
+                <h2 style={{ color: "#FFF" }}>Light</h2>
+                <MdSunny color="#FFF" size={20} />
+              </div>
+            )
+          }
         </button>
 
       </header>

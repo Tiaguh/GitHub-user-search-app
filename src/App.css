@@ -40,6 +40,22 @@ header h1 {
   font-size: 26px;
 }
 
+header button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+header button .button-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: "Space Mono", monospace;
+  font-size: 12px;
+}
+
 .input-container {
   width: 730px;
   height: 69px;

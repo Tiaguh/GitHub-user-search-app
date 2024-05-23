@@ -8,8 +8,25 @@ import { FaTwitter, FaCity } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
 import { FaMoon } from "react-icons/fa6";
 
+import axios from 'axios';
+
 export default function App() {
   const [background, setBackground] = useState(false)
+  const [userName, setUserName] = useState("")
+
+  const [request, setRequest] = useState([])
+
+  console.log(request);
+
+  async function getUser() {
+    try {
+      const data = await axios.get(`https://api.github.com/users/${userName}`)
+      setRequest(data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   return (
     <div
@@ -47,8 +64,15 @@ export default function App() {
         style={{ background: background ? "#FFF" : "#1e2a47" }}
       >
         <HiOutlineMagnifyingGlass color="#0079ff" size={45} />
-        <input placeholder="Search Github Username..." />
-        <button>Search</button>
+        <input
+          onChange={(e) => setUserName(e.target.value)}
+          placeholder="Search Github Username..."
+        />
+        <button
+          onClick={()=> getUser()}
+        >
+          Search
+        </button>
       </div>
 
       <div

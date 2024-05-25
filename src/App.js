@@ -1,5 +1,7 @@
 import './App.css';
+
 import { useState } from 'react';
+
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { MdLocationPin, MdSunny } from "react-icons/md";
 import { FaTwitter, FaCity } from "react-icons/fa";
@@ -13,7 +15,8 @@ export default function App() {
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
 
-  async function getUser() {
+  async function getUser(e) {
+    e.preventDefault();
     try {
       const response = await axios.get(`https://api.github.com/users/${userName}`);
       setUserData(response.data);
@@ -30,17 +33,37 @@ export default function App() {
         <h1 style={{ color: background ? "#000" : "#FFF" }}>DevFinder</h1>
         <button onClick={() => setBackground(!background)}>
           <div className='button-icon'>
-            <h2 style={{ color: background ? "#697c9a" : "#FFF" }}>Dark</h2>
-            <FaMoon color="#697c9a" size={20} />
+
+            {
+              background ? (
+                <>
+                  <h2 style={{ color: background ? "#697c9a" : "#FFF" }}>Dark</h2>
+                  <FaMoon color="#697c9a" size={20} />
+                </>
+              ) : (
+                <>
+                  <h2 style={{ color: background ? "#697c9a" : "#FFF" }}>Light</h2>
+                  <MdSunny color="#FFF" size={22} />
+                </>
+              )
+            }
+
           </div>
         </button>
       </header>
 
-      <div className="input-container" style={{ background: background ? "#FFF" : "#1e2a47" }}>
+      <form
+        onSubmit={(e) => getUser(e)}
+        style={{ background: background ? "#FFF" : "#1e2a47" }}
+      >
         <HiOutlineMagnifyingGlass color="#0079ff" size={45} />
-        <input onChange={(e) => setUserName(e.target.value)} placeholder="Search Github Username..." />
-        <button onClick={() => getUser()}>Search</button>
-      </div>
+        <input
+          onChange={(e) => setUserName(e.target.value)}
+          placeholder="Search Github Username..."
+          style={{ color: background ? "#000" : "#FFF" }}
+        />
+        <button onClick={(e) => getUser(e)}>Search</button>
+      </form>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
 

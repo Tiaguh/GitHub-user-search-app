@@ -65,7 +65,7 @@ header button .button-icon {
 }
 
 form {
-  width: 730px;
+  width: 850px;
   height: 69px;
 
   display: flex;
@@ -117,7 +117,7 @@ form button {
 }
 
 .user-info-container {
-  width: 730px;
+  width: 850px;
   height: 419px;
 
   display: flex;
@@ -128,7 +128,7 @@ form button {
 
   border-radius: 15px;
 
-  padding-inline: 25px;
+  padding-inline: 35px;
   margin-top: 20px;
 }
 
@@ -226,7 +226,7 @@ form button {
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .icon-container {

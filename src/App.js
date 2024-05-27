@@ -27,7 +27,7 @@ export default function App() {
       const response = await axios.get(`https://api.github.com/users/${userName}`);
       setUserData(response.data);
     } catch (error) {
-      toast.error("Failed to fetch user data. Please try again later.", {
+      toast.error("Usuário não encontrado!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -92,7 +92,7 @@ export default function App() {
               <img src={userData.avatar_url} alt="User Avatar" />
 
               <div className="user-info">
-                
+
                 <div>
                   <h1 style={{ color: background ? "#000" : "#FFF" }}>{userData.name}</h1>
                   <h2>{userData.login}</h2>
@@ -100,7 +100,11 @@ export default function App() {
                 </div>
 
                 <div>
-                  <p>Joined: {new Date(userData.created_at).toLocaleDateString()}</p>
+                  <p
+                    style={{ color: background ? "#000" : "#FFF" }}
+                  >
+                    Joined: {new Date(userData.created_at).toLocaleDateString()}
+                  </p>
                 </div>
 
               </div>

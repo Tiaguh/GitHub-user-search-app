@@ -129,24 +129,32 @@ export default function App() {
 
             <div className="user-social">
               <div>
-                <div className="icon-container" >
-                  <MdLocationPin size={28} color="#4b6a9b" />
-                  <h3 style={{ color: background ? "#000" : "#FFF" }}>Location: {userData.location}</h3>
-                </div>
-                <div className="icon-container" >
-                  <FaTwitter size={25} color="#4b6a9b" />
-                  <h3 style={{ color: background ? "#000" : "#FFF" }}>Twitter: {userData.twitter_username}</h3>
-                </div>
+                {userData.location && (
+                  <div className="icon-container">
+                    <MdLocationPin size={28} color="#4b6a9b" />
+                    <h3 style={{ color: background ? "#000" : "#FFF" }}>Location: {userData.location}</h3>
+                  </div>
+                )}
+                {userData.twitter_username && (
+                  <div className="icon-container">
+                    <FaTwitter size={25} color="#4b6a9b" />
+                    <h3 style={{ color: background ? "#000" : "#FFF" }}>Twitter: {userData.twitter_username}</h3>
+                  </div>
+                )}
               </div>
               <div>
-                <div className="icon-container" >
-                  <IoIosLink size={28} color="#4b6a9b" />
-                  <h3 style={{ color: background ? "#000" : "#FFF" }}>Site: {userData.blog}</h3>
-                </div>
-                <div className="icon-container" >
-                  <FaCity size={26} color="#4b6a9b" />
-                  <h3 style={{ color: background ? "#000" : "#FFF" }}>Company: {userData.company}</h3>
-                </div>
+                {userData.blog && (
+                  <div className="icon-container">
+                    <IoIosLink size={28} color="#4b6a9b" />
+                    <h3 style={{ color: background ? "#000" : "#FFF" }}>Site: {userData.blog}</h3>
+                  </div>
+                )}
+                {userData.company && (
+                  <div className="icon-container">
+                    <FaCity size={26} color="#4b6a9b" />
+                    <h3 style={{ color: background ? "#000" : "#FFF" }}>Company: {userData.company}</h3>
+                  </div>
+                )}
               </div>
             </div>
           </div>

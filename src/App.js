@@ -69,7 +69,7 @@ export default function App() {
       </header>
 
       <div
-        style={{ height: userData ? "82vh" : "70vh" }}
+        style={{ height: userData ? "85vh" : "70vh" }}
         className="form-container"
       >
 
@@ -77,7 +77,7 @@ export default function App() {
           onSubmit={(e) => getUser(e)}
           style={{ background: background ? "#FFF" : "#1e2a47" }}
         >
-          <HiOutlineMagnifyingGlass color="#0079ff" size={45} />
+          <HiOutlineMagnifyingGlass color="#0079ff" size={42} />
           <input
             onChange={(e) => setUserName(e.target.value)}
             placeholder="Search Github Username..."
